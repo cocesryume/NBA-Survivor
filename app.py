@@ -75,7 +75,7 @@ for s in range(num_scenarios):
 out = df.copy()
 out["Exact EV"] = ev
 out["EV Index"] = ev * pool_size
-out["Leverage (EV Index / Own)"] = np.where(out["Ownership"] > 0, out["EV Index"] / out["Ownership"], np.nan)
+
 out = out.sort_values("EV Index", ascending=False)
 
 st.write("### Results")
